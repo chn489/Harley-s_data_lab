@@ -1,4 +1,4 @@
-这是一份关于大学生创业精神的调查结果分析。除了基础的描述统计外，我还选取了一些因子对总分进行了建模。  
+这是一份关于大学生创业精神的调查结果分析。选取了一些因子对总分进行了建模。  
   
 因子：  
 具体12个因子分别是：school_label,major,sex,grade,imagination,confidence,method,thinking,risk,school_education,financial_support,guidance;  
