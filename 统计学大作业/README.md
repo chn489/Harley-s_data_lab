@@ -2,7 +2,7 @@
   
 因子：  
 具体12个因子分别是：school_label,major,sex,grade,imagination,confidence,method,thinking,risk,school_education,financial_support,guidance;  
-特别说明的是，在school_label的构造上，我的做法是爬取2021年校友会中国大学星际排名形成一个excel,然后选取前100所学校作为sch_list（即‘重点大学’名单），然后将被调查者的学校与sch_list比对，在list里面则school_label=1,不在则等于0.
+特别说明的是，在school_label的构造上，我的做法是爬取2021年校友会中国大学星级排名形成一个excel,然后选取前100所学校作为sch_list（即‘重点大学’名单），并且将一些学校的缩写也加入到list中。然后将被调查者的学校与sch_list比对，在list里面则school_label=1,不在则等于0.
 前4个因子是基本信息，从imagination到risk是个人特质，最后三个是外部因素，主要是学校在创新创业上的支持。  
   
 模型：  
