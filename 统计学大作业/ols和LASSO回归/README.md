@@ -15,3 +15,5 @@ LASSO:
   
 未解之谜：  
 真正吊诡的是在使用sklearn的accuracy_score对模型进行评分时，会报错说数据是连续性数据。而且用pred和target_test画图时，会发现target_test的曲线十分怪异。
+#破解未解之谜：
+模型默认score为连续性变量，将其转化成numpy.array数据类型即可
