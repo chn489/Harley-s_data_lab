@@ -9,7 +9,7 @@
 我使用了5种方法对总分进行了建模，分别是ols,决策树，LASSO回归，XGBoost回归和XGBoost多分类。具体结果请查看对应子目录。  
   
 数据清洗：  
-数据清洗主要依靠自己写的data_handler库，里面的功能有数据分组、relabel和描述统计（最大最小值、平均值和方差）  
+数据清洗主要依靠自己写的data_handler库，里面的功能有按照性别、学校和专业进行数据分组、relabel（给学校和总分重新打上标签，对总分relabel时又有relabel_score和relabel_score_xgb两种，分别用于普通决策树和xgboost）和描述统计（最大最小值、平均值和方差）  
   
 爬虫：  
 见get_sch_list.py
