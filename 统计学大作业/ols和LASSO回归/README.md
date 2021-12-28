@@ -14,6 +14,6 @@ LASSO:
 模型结果表明第5~第9个因子（即个人特质方面的所有因子）对模型产生了较大的正面影响，而来自外部的因素（学校的因素，最后三个因子）对模型的影响不大甚至会产生负面影响。这点与使用XGBoost的出来的结果不太一致（参考‘决策树与XGBoost’下面的‘因子重要性’两张图）  
   
 未解之谜：  
-真正吊诡的是在使用sklearn的accuracy_score对模型进行评分时，会报错说数据是连续性数据。而且用pred和target_test画图时，会发现target_test的曲线十分怪异。
+真正吊诡的是在使用sklearn的accuracy_score对模型进行评分时，会报错说数据是连续性数据。而且用pred和target_test画图时，会发现target_test的曲线十分怪异。  
 #破解未解之谜：
-模型默认score为连续性变量，将其转化成numpy.array数据类型即可
+模型默认score为连续性变量，将其转化成numpy.array数据类型即可。
