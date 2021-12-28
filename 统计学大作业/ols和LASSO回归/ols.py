@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 import data_handler
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
+import matplotlib.pyplot as plt
 
 df = pd.read_excel('创业精神.xlsx')
 sch_list = data_handler.build_sch_list(100)
@@ -24,7 +25,7 @@ guidance = df['7、我所在学校通过多种渠道为我们提供创业指导'
 
 feature = np.vstack((school_label, major, sex, grade, imagination, confidence, method, thinking, risk, sch_edu, support,
                      guidance)).transpose()
-target = score
+target = np.array(score)
 feature_train, feature_test, target_train, target_test = train_test_split(feature, target, test_size=0.2,
                                                                           random_state=0)
 lrg = LinearRegression()
@@ -35,3 +36,9 @@ print('mse=', MSE)
 r2 = r2_score(target_test, pred)
 print('r2=', r2)
 print(lrg.coef_, lrg.intercept_)
+plt.plot(pred, label='pred')
+plt.plot(target_test, label='target_test')
+plt.xlabel('test_num')
+plt.ylabel('score')
+plt.legend()
+plt.show()
