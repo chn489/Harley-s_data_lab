@@ -25,7 +25,7 @@ guidance = df['7、我所在学校通过多种渠道为我们提供创业指导'
 
 feature = np.vstack((school_label, major, sex, grade, imagination, confidence, method, thinking, risk, sch_edu, support,
                      guidance)).transpose()
-target = score
+target = np.array(score)
 feature_train, feature_test, target_train, target_test = train_test_split(feature, target, test_size=0.2,
                                                                           random_state=0)
 
