@@ -6,7 +6,7 @@
 前4个因子是基本信息，从imagination到risk是个人特质，最后三个是外部因素，主要是学校在创新创业上的支持。  
   
 模型：  
-我使用了5种方法对总分进行了建模，分别是ols,决策树，LASSO回归，XGBoost回归和XGBoost多分类。具体结果请查看对应子目录。  
+我使用了5种方法对总分进行了建模，分别是ols,决策树，LASSO回归，XGBoost回归和XGBoost多分类。（或许以后还有DNN和CNN的加入）具体结果请查看对应子目录。  
   
 数据清洗：  
 数据清洗主要依靠自己写的data_handler库，里面的功能有按照性别、学校和专业进行数据分组、relabel（给学校和总分重新打上标签，对总分relabel时又有relabel_score和relabel_score_xgb两种，分别用于普通决策树和xgboost）和描述统计（最大最小值、平均值和方差）  
